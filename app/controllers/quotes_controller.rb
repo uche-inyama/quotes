@@ -1,7 +1,7 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
   def index
-    @quotes = Quote.all
+    @quotes = current_company.quotes.all
   end
 
   def show
@@ -12,7 +12,7 @@ class QuotesController < ApplicationController
   end
 
   def create
-    @quote = Quote.new(quote_params)
+    @quote = current_company.quotes.build(quote_params)
     respond_to do |format|
       if @quote.save
         format.html{ redirect_to quotes_path, notice: "Quote was successfully created." }
@@ -45,7 +45,7 @@ class QuotesController < ApplicationController
   private
 
   def set_quote
-    @quote = Quote.find(params[:id])
+    @quote = current_company.quotes.find(params[:id])
   end
   
   def quote_params

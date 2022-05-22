@@ -1,4 +1,4 @@
-<main class="container">
+<section class="container">
   <%= link_to sanitize("&larr; Back to quote"), quotes_path %>
   <div class="header">
     <h1>New quote</h1>
@@ -6,4 +6,4 @@
   <%= turbo_frame_tag @quote do%>
     <%= render "form", quote: @quote %>
   <% end %>
-</main>
+</section>
