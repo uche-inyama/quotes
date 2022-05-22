@@ -13,6 +13,9 @@
   <body>
     <%= render "layouts/navbar" %>
     <main class="container">
+      <div id="flash" class="flash">
+        <%= render "layouts/flash" %>
+      </div>
       <%= yield %>
     <main>
   </body>
