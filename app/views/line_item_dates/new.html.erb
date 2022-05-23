@@ -1,0 +1,10 @@
+<div>
+  <%= link_to sanitize("&larr; Back to quote"), quote_path(@quote)%>
+
+  <div>
+    <h1>New date</h1>
+  </div>
+  <%= turbo_frame_tag dom_id(LineItemDate.new) do%>
+    <%= render "form", quote: @quote, line_item_date: @line_item_date %>
+  <% end %>
+</div>

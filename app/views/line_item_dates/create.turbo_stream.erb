@@ -1,0 +1,3 @@
+<%= turbo_stream.prepend "line_item_dates", partial: "line_item_dates/line_item_date", locals: {quote: @quote, line_item_date: @line_item_date} %>
+<%= turbo_stream.update LineItemDate.new, "" %>
+<%= turbo_stream.prepend "flash", partial: "layouts/flash" %>
