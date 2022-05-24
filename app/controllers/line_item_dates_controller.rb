@@ -22,16 +22,22 @@ class LineItemDatesController < ApplicationController
   end
 
   def update
-    if @line_item_date.update(line_item_date_params)
-      redirect_to quote_path(@quote), notice: "quote was successfully updated."
-    else
-      render :edit, status: unprocessable_entity
+    respond_to do |format|
+      if @line_item_date.update(line_item_date_params)
+        format.turbo_stream {flash.now[:notice] = "quote was successfully updated."}
+        format.html { redirect_to quote_path(@quote), notice: "quote was successfully updated." }
+      else
+        format.html{ render :edit, status: unprocessable_entity }
+      end
     end
   end
 
   def destroy
-    @line_item_date.destroy
-    redirect_to quote_path(@quote), notice: "Quote was successfully destroyed."
+    respond_to do |format|
+      @line_item_date.destroy
+      format.turbo_stream{ flash.now[:notice] = "Quote was successfully deleted."}
+      format.html{ redirect_to quote_path(@quote), notice: "Quote was successfully destroyed." }
+    end
   end
 
   private
