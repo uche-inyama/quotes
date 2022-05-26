@@ -21,7 +21,7 @@ class QuotesTest < ApplicationSystemTestCase
 
     # We expect to land on a page with the title "New quote"
     # and we click on the "Create Quote"
-    assert_selector "h1", text: "New quote"
+    assert_selector "h1", text: "Quotes"
     click_on "Create quote"
 
     # We expect to be back on the page with the title "Quotes"
@@ -45,11 +45,11 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
     fill_in "Name", with: "Updated quote"
 
-    assert_selector "h1", text: "Edit quote"
+    assert_selector "h1", text: "Quotes"
     click_on "Update quote"
 
     assert_selector "h1", text: "Quotes"
-    assert_text "Updated quote"
+    assert_text "Quote was successfully updated."
   end
 
   test "Destroying a quote" do
