@@ -2,7 +2,7 @@ module RequestSpecHelper
   include Warden::Test::Helpers
 
   def self.included(base)
-    base.before(:each) { warden.test_mode! }
+    base.before(:each) { Warden.test_mode! }
     base.after(:each) { Warden.test_reset! }
   end
 

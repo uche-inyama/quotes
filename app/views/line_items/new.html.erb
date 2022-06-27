@@ -4,7 +4,7 @@
     <div class="header">
       <h1>New item for <%= l(@line_item_date.date, format: :long) %></h1>
     </div>
-    <%= turbo_frame_tag LineItem.new do%>
+    <%= turbo_frame_tag dom_id(LineItem.new, dom_id(@line_item_date)) do%>
       <%= render "form",
                 quote: @quote,
                 line_item_date: @line_item_date,

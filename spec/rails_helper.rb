@@ -84,5 +84,8 @@ RSpec.configure do |config|
   #     example.run
   #   end
   # end
+  config.include RequestSpecHelper, type: :feature
+  config.include Warden::Test::Helpers
 end
+Capybara.default_driver = :selenium_chrome_headless
 

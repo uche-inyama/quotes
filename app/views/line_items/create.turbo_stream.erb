@@ -1,5 +1,13 @@
 <%= turbo_stream.prepend "line_items", partial: "line_items/line_item", 
     locals: {quote: @quote, line_item: @line_item, line_item_date: @line_item_date} %>
 
-<%= turbo_stream.update LineItem.new, "" %>
+<%= turbo_stream.update dom_id(LineItem.new, dom_id(@line_item_date)), "" %>
 <%= turbo_stream.prepend "flash", partial: "layouts/flash" %>
+
+<%= turbo_stream.update dom_id(@quote, :total) do%>
+  <%= render "quotes/total", quote: @quote %>
+<% end %>
+
+<%= turbo_stream.update dom_id(@quote, :total_top) do%>
+  <%= render "quotes/total_top", quote: @quote %>
+<% end %>

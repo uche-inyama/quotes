@@ -4,7 +4,13 @@
   gap: var(--space-xs);
 
   &__group {
-    flex: 1
+    flex: 1;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  &__group:nth-child(odd) {
+    // margin: 10px 0;
   }
 
   &__input {
@@ -15,6 +21,7 @@
     border-radius: var(--botder-radius);
     outline: none;
     transition: box-shadow 250ms;
+    // margin-bottom: 10px;
 
     &:focus {
       box-shadow: 0 0 0 2px var(--color-glint);
@@ -24,4 +31,14 @@
       border-color: var(--color-primary);
     }
   }
+}
+
+.sign-up {
+  display: inline-block;
+  margin-top: 10px;
+}
+.session-form,
+.registration-form {
+  max-width: 50%;
+  margin: 0 auto;
 }

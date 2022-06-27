@@ -77,6 +77,7 @@ group :test do
   gem "webdrivers"
   gem "shoulda-matchers"
   gem "database_cleaner"
+  gem 'warden-rspec-rails'
 end
 
 gem "devise", "~> 4.8"
