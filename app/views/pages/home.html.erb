@@ -1,7 +1,5 @@
 <section>
   <h1>Request for your orders</h1>
-  <p>Built with Hotwire</p>
-
   <% if user_signed_in? %>
     <%= link_to "View quotes", quotes_path, class: "btn btn--dark" %>
   <% else %>
