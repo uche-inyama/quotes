@@ -13,7 +13,7 @@ Users can generate a quote for an item. It shows the cost, time and the date the
  
  ## Getting Started
  
-      To get a local copy up and running follow these example steps
+ ### To get a local copy up and running follow these steps
       
  ### Prerequisites
       Node
