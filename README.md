@@ -25,7 +25,9 @@ Users can generate a quote for an item. It shows the cost, time and the date the
   ### Usage
        run rails s
        
- ## Author
+ ## Author 
+ 
+ ### Inyama, Uchechukwu Henry
  
   - Github: [@githubhandle](https://github.com/uche-inyama)
   - Linkedin: [@LinkedInhandle](https://www.linkedin.com/in/uchechukwu-inyama/)
