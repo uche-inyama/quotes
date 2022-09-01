@@ -11,6 +11,9 @@ Users can generate a quote for an item. It shows the cost, time and the date the
  ## Live Demo
  [Live Demo link](https://fierce-coast-23206.herokuapp.com)
  
+ ### Credentials
+     email: johndoe@gmail.com; password: password
+ 
  ## Getting Started
  
  ### To get a local copy up and running follow these steps
@@ -23,7 +26,7 @@ Users can generate a quote for an item. It shows the cost, time and the date the
   ### Installation
       run bundle install
   ### Usage
-       run rails s
+       run rails s OR /bin/dev
        
  ## Author 
  
